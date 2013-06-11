@@ -2,6 +2,7 @@ Options -Indexes
 Options +FollowSymlinks
 RewriteEngine on
 RewriteRule ^(.*)\.php$ veloce.php [NC]
+RewriteRule ^(.*\.)(css)$ veloce.php?minify&file=$1 [L,NC]
 
 DirectoryIndex veloce.php
 

@@ -51,7 +51,8 @@ $plugins = array(
     "database" => true,
     "html" => true,
     "cache" => false,
-    "Classloader" => false
+    "Classloader" => false,
+    'minify' => true
     );
 
 //

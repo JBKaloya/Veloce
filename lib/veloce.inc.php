@@ -84,10 +84,16 @@ foreach($plugins as $plugin => $value):
             break;
 
             case "Classloader":
-                require_once("lib/vclassloader.php")
+                require_once("lib/vclassloader.php");
 
                 $vclassloader = new VeloceClassLoader($CustomClasses);
                 $vclassloader->init();
+            break;
+
+            case "minify":
+                require_once("lib/minify.php");
+                
+                $minify = new Minify();
             break;
 
         endswitch;
@@ -96,4 +102,3 @@ foreach($plugins as $plugin => $value):
 
 endforeach;
 
-?>
